@@ -1,0 +1,40 @@
+* {
+  font-family: 'Poppins';
+}
+
+
+.cr-slauteblue-sm {
+  background-color: #191a32!important;
+}
+
+.cr-slauteblue-md {
+  background-color: #2a2c54!important;
+}
+
+.cr-slauteblue-lg {
+  background-color: #3b3d76!important;
+}
+
+.chikn-red {
+  color: #FAB801;
+}
+
+.selectbox {
+  box-shadow: 0 0 0 0.25rem rgb(223 63 61 / 50%)
+}
+
+.selectbox:focus {
+  box-shadow: 0 0 0 0.25rem rgb(223 63 61 / 50%)
+}
+
+.selectbox::after {
+  color:#FAB801;
+}
+
+.background-img {
+  background-image: url('../public/img/staking_background.jpeg');
+}
+
+.y-reverse {
+  transform: rotateY(3.142rad) translateY(-200px);
+}
