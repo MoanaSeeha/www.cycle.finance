@@ -10,7 +10,7 @@ export const Board: FC<IBoard> = (params) => {
   } = params;
 
   return (
-    <div className={`bg-[#A62727] py-10 rounded-lg text-white shadow-xl ${className?className:''}`}>
+    <div className={`bg-[#274b69] py-10 rounded-lg text-white shadow-xl ${className?className:''}`}>
         {children}
     </div>
   )

@@ -1,18 +1,25 @@
 import React, {FunctionComponent} from 'react';
+import styled from "styled-components";
 
-import { ToolButton } from '../Button/index';
+const HeaderBorder = styled.div`
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(255, 255, 255) 50%, rgba(0, 0, 0, 0) 100%);
+  width: 30%;
+  text-align: center;
+  display: flex;
+  border: none;
+  height: 1px;
+  margin: 0;
+  flex-shrink: 0;
+`;
 
 type Props = {
   title: string,
-  loading: boolean
 }
 
 const PageHeader:FunctionComponent<Props> = (props: Props) => (
-  <div className="flex flex-row justify-between w-full">
-    <h1 className='chikn-red text-4xl'>{props.title}</h1>
-    <div>
-      <ToolButton buttonProps={[{icon: 'refresh'}]}/>
-    </div>
+  <div className="flex flex-col items-center justify-center w-full space-y-5">
+    <h1 className=' w-[500px] text-center text-gray-300 text-4xl'>{props.title}</h1>
+    <HeaderBorder/>
   </div>
 )
 

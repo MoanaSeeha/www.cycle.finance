@@ -9,7 +9,7 @@ import Router from "./data/router";
 
 const App = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full background-img">
       <Header />
       <ParallaxProvider>
         <Router />
