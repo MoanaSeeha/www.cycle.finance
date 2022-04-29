@@ -38,3 +38,61 @@
 .y-reverse {
   transform: rotateY(3.142rad) translateY(-200px);
 }
+
+.header {
+  background: rgba(165, 33, 33, 0);
+  transform: none;
+  transition: transform 225ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  backdrop-filter: blur(10px);
+}
+
+.header-logo {
+  cursor: pointer;
+  height: 75px;
+  padding-right: 10px;
+  transition-duration: 0.5s;
+  transition-property: transform;
+}
+
+.header-logo:hover {
+  transform: rotateZ(-30deg);
+}
+
+.hamburger {
+  display: none;
+  z-index:100; 
+}
+
+.hamburger .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: #ffffff;
+
+}
+
+@media only screen and (max-width: 873px) {
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+  }
+
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    -webkit-transform: translateY(8px) rotate(45deg);
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    -webkit-transform: translateY(-8px) rotate(-45deg);
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
