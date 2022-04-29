@@ -8,6 +8,18 @@ const Routes:IRoute[] = [
   {
     path: '/howl',
     title: 'Howl'
+  },
+  {
+    path: '/valuts',
+    title: 'Valuts'
+  },
+  {
+    path: '/stake',
+    title: 'Stake'
+  },
+  {
+    path: '/cycle',
+    title: 'Cycle'
   }
 ];
 
