@@ -4,7 +4,7 @@ import 'react-slidedown/lib/slidedown.css'
 
 import { Board } from '../../components/Board';
 import SelectBox, {ISelectItem} from '../../components/SelectBox';
-import Input from '../../components/Input';
+// import Input from '../../components/Input';
 import Icons from '../../components/Icons';
 import { RoundedButton } from '../../components/Button';
 
@@ -45,8 +45,8 @@ const EggAvax = () => {
                     <div className='flex justify-center text-4xl font-extrabold'>0.000000</div>
                     <div className='flex justify-center text-xl'>TOTAL LP WALLET BALANCE</div>
                     <div className='flex flex-row'>
-                      <Input value='0' inputClass=' rounded-r rounded-xl' className='basis-9/12 min-w-0' onChange={() => {}}/>
-                      <Input inputClass=' rounded-l rounded-xl cursor-pointer' className='basis-3/12 min-w-0' value='Max' type='button' onChange={() => {}}/>
+                      {/* <Input value='0' inputClass=' rounded-r rounded-xl' className='basis-9/12 min-w-0' onChange={() => {}}/>
+                      <Input inputClass=' rounded-l rounded-xl cursor-pointer' className='basis-3/12 min-w-0' value='Max' type='button' onChange={() => {}}/> */}
                     </div>
                     <RoundedButton title='Approve' disabled/>
                     <RoundedButton title='Deposit'/>

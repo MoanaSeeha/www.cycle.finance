@@ -6,7 +6,7 @@ import EggAvax from './EggAvax';
 
 const LpHunt = () => {
   return (
-    <CustomPage header='LP Hunt'>
+    <CustomPage>
       <div className='flex flex-col md:space-y-7 space-y-3'>
         <EggAvax/>
       </div>
