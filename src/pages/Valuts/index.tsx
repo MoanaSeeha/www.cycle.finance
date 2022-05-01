@@ -12,12 +12,10 @@ import ListItemText from '@mui/material/ListItemText';
 import { CustomPage } from '../../components/Page'
 import PageHeader from '../../components/Page/Header';
 import { Board } from '../../components/Board';
+import ValutCard from './ValutsCard';
 
 interface State {
-  amount: string;
-  password: string;
   search: string;
-  weightRange: string;
   valutType: string;
   myValut: boolean;
   protocols: string[];
@@ -28,14 +26,21 @@ interface IProtocol {
   protocol: string;
 }
 
-const protocols: IProtocol[] = [
+export const protocols: IProtocol[] = [
   {img:`${process.env.PUBLIC_URL}/img/pangolin.jpg`, protocol: 'Pangolin'},
   {img:`${process.env.PUBLIC_URL}/img/avaware.png`, protocol: 'Avaware'},
   {img:`${process.env.PUBLIC_URL}/img/traderjoe.png`, protocol: 'Trader Joe'},
   {img:`${process.env.PUBLIC_URL}/img/olive.png`, protocol: 'Olive Cash'},
   {img:`${process.env.PUBLIC_URL}/img/blue1.png`, protocol: 'Tip Blue'},
   {img:`${process.env.PUBLIC_URL}/img/lydia.png`, protocol: 'Lydia'},
+]
 
+export const valutTypes = [
+  'All',
+  'Single Staking',
+  'Stables',
+  'LP Tokens',
+  'CYCLE Valuts',
 ]
 
 const LpHunt = () => {
@@ -43,10 +48,7 @@ const LpHunt = () => {
   const theme = useTheme();
 
   const [values, setValues] = React.useState<State>({
-    amount: '',
-    password: '',
     search: '',
-    weightRange: '',
     valutType: '0',
     myValut: false,
     protocols: []
@@ -99,7 +101,7 @@ const LpHunt = () => {
               </div>
             </div>
             <div>
-              <FormControl fullWidth>
+              <FormControl>
                 <InputLabel id="demo-simple-select-label" className='text-white'>Valut Type</InputLabel>
                 <Select
                   labelId="demo-simple-select-label"
@@ -109,14 +111,14 @@ const LpHunt = () => {
                   onChange={handleValutTypeChange}
                   className=' text-white text-left w-40 mr-8'
                 >
-                  <MenuItem value={0}>All</MenuItem>
-                  <MenuItem value={1}>Single Staking</MenuItem>
-                  <MenuItem value={2}>Stables</MenuItem>
-                  <MenuItem value={2}>LP Tokens</MenuItem>
-                  <MenuItem value={2}>CYCLE Valuts</MenuItem>
+                  {valutTypes.map((v,i) => {
+                    return (
+                      <MenuItem key={i} value={i}>{v}</MenuItem>
+                    )
+                  })}
                 </Select> 
               </FormControl>
-              <FormControl sx={{ m: 1, width: 300 }}>
+              <FormControl sx={{width: '300px'}}>
                 <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
                 <Select
                   labelId="demo-multiple-checkbox-label"
@@ -131,6 +133,7 @@ const LpHunt = () => {
                   {protocols.map((p, index) => (
                     <MenuItem key={index} value={index}>
                       <Checkbox  style={{color: 'white'}}/>
+                      <img src={p.img} alt="" className=' rounded-t-full w-10'/>
                       <ListItemText primary={p.protocol} />
                     </MenuItem>
                   ))}
