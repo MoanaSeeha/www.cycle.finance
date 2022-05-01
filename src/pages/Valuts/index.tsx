@@ -7,6 +7,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select, { SelectChangeEvent } from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
+import ListItemText from '@mui/material/ListItemText';
 
 import { CustomPage } from '../../components/Page'
 import PageHeader from '../../components/Page/Header';
@@ -19,7 +20,23 @@ interface State {
   weightRange: string;
   valutType: string;
   myValut: boolean;
+  protocols: string[];
 }
+
+interface IProtocol {
+  img: string;
+  protocol: string;
+}
+
+const protocols: IProtocol[] = [
+  {img:`${process.env.PUBLIC_URL}/img/pangolin.jpg`, protocol: 'Pangolin'},
+  {img:`${process.env.PUBLIC_URL}/img/avaware.png`, protocol: 'Avaware'},
+  {img:`${process.env.PUBLIC_URL}/img/traderjoe.png`, protocol: 'Trader Joe'},
+  {img:`${process.env.PUBLIC_URL}/img/olive.png`, protocol: 'Olive Cash'},
+  {img:`${process.env.PUBLIC_URL}/img/blue1.png`, protocol: 'Tip Blue'},
+  {img:`${process.env.PUBLIC_URL}/img/lydia.png`, protocol: 'Lydia'},
+
+]
 
 const LpHunt = () => {
 
@@ -31,7 +48,8 @@ const LpHunt = () => {
     search: '',
     weightRange: '',
     valutType: '0',
-    myValut: false
+    myValut: false,
+    protocols: []
   });
 
 
@@ -96,6 +114,26 @@ const LpHunt = () => {
                   <MenuItem value={2}>Stables</MenuItem>
                   <MenuItem value={2}>LP Tokens</MenuItem>
                   <MenuItem value={2}>CYCLE Valuts</MenuItem>
+                </Select> 
+              </FormControl>
+              <FormControl sx={{ m: 1, width: 300 }}>
+                <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
+                <Select
+                  labelId="demo-multiple-checkbox-label"
+                  id="demo-multiple-checkbox"
+                  multiple
+                  value={values.protocols}
+                  // onChange={handleChange}
+                  input={<OutlinedInput label="Tag" />}
+                  // renderValue={(selected) => selected.join(', ')}
+                  // MenuProps={MenuProps}
+                >
+                  {protocols.map((p, index) => (
+                    <MenuItem key={index} value={index}>
+                      <Checkbox  style={{color: 'white'}}/>
+                      <ListItemText primary={p.protocol} />
+                    </MenuItem>
+                  ))}
                 </Select>
               </FormControl>
             </div>
