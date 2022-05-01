@@ -32,7 +32,7 @@
 }
 
 .background-img {
-  background-image: url('../public/img/staking_background.jpeg');
+  background-image: linear-gradient(140deg, #ff896b 0%, #5450ec 50%, #4898b4 75%);
 }
 
 .y-reverse {
@@ -84,6 +84,20 @@
   font-size: 0.8em;
   border: 2px solid rgb(224, 224, 224);
   border-radius: 15px;
+}
+
+.MuiOutlinedInput-input {
+  color: white !important;
+  
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: white !important;
+}
+
+.MuiMenu-list {
+  background: #2D3848;
+  color: white;
 }
 
 @media only screen and (max-width: 873px) {

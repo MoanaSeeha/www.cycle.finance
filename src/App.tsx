@@ -16,7 +16,7 @@ const App = () => {
       type: "light",
       primary: {
         light: "#ffffff",
-        main: "#26a69a",
+        main: "#ffffff",
         dark: "#004d40"
       }
     }
