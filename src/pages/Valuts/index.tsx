@@ -43,6 +43,14 @@ export const valutTypes = [
   'CYCLE Valuts',
 ]
 
+interface IValutCard {
+  
+}
+
+const ValutCards = [
+
+]
+
 const LpHunt = () => {
 
   const theme = useTheme();
