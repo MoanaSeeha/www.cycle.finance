@@ -81,6 +81,16 @@ const LpHunt = () => {
     protocols: []
   });
 
+  const handleProtocolChange = (event: SelectChangeEvent<string[]>) => {
+    const {
+      target: { value },
+    } = event;
+    setValues(
+      { ...values, 
+        protocols: typeof value === 'string' ? value.split(',') : value,
+      }
+    );
+  };
 
   const handleChange =
     (prop: keyof State) => (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -90,7 +100,7 @@ const LpHunt = () => {
   const handleValutTypeChange = (event: SelectChangeEvent) => {
     setValues({ ...values, valutType: event.target.value});
   };
-
+  console.log(values);
   return (
     <CustomPage>
       <PageHeader title='Auto-compound LP tokens + earn $CYCLE'/>
@@ -146,24 +156,33 @@ const LpHunt = () => {
                 </Select> 
               </FormControl>
               <FormControl sx={{width: '300px'}}>
-                <InputLabel id="demo-multiple-checkbox-label">Tag</InputLabel>
+                <InputLabel id="demo-multiple-checkbox-label">Protocols</InputLabel>
                 <Select
                   labelId="demo-multiple-checkbox-label"
                   id="demo-multiple-checkbox"
                   multiple
                   value={values.protocols}
-                  // onChange={handleChange}
-                  input={<OutlinedInput label="Tag" />}
-                  // renderValue={(selected) => selected.join(', ')}
+                  onChange={handleProtocolChange}
+                  input={<OutlinedInput label="Protocols" />}
+                  renderValue={(selected) => {
+                    let value = '';
+                    selected.map(s=> {
+                      value += protocols[parseInt(s)-1].protocol+', ';
+                    })
+                    return value}}
                   // MenuProps={MenuProps}
                 >
-                  {protocols.map((p, index) => (
-                    <MenuItem key={index} value={index}>
-                      <Checkbox  style={{color: 'white'}}/>
+                  {protocols.map((p, index) => {
+                    let f = false;
+                    values.protocols.map(p => {
+                      if(p.toString() === (index+1).toString()) f=true;
+                    })
+                    return <MenuItem key={index} value={index+1}>
+                      <Checkbox  style={{color: 'white'}} checked={f}/>
                       <img src={p.img} alt="" className=' rounded-t-full w-10'/>
                       <ListItemText primary={p.protocol} />
                     </MenuItem>
-                  ))}
+                  })}
                 </Select>
               </FormControl>
             </div>
@@ -174,11 +193,16 @@ const LpHunt = () => {
       <div className='flex flex-col flex-wrap justify-center w-full '>
         {
           ValutCards.map((v,i) => {
-            if(
-              (values.protocols.includes(v.protocol.toString()) || values.protocols.length === 0) &&
-              (v.valutType.includes(Number(values.valutType)) || values.valutType === '0')
-            )
-              <ValutCard {...v} key={i} />
+            let f = false;
+            values.protocols.map(p => {
+              if(p.toString() === v.protocol.toString()) f=true;
+            })
+            v.valutType.map(v => {
+              if(v === parseInt(values.valutType) && f) f=true;
+            })
+            console.log(f);
+            if((values.protocols.length === 0 && values.valutType === '0') || f)
+              return <ValutCard {...v} key={i} />
             }
           )
         }
