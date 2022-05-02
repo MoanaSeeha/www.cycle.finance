@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { Board } from '../../components/Board';
 import { protocols } from './index';
 
-interface IValutsCard {
+export interface IValutsCard {
   protocol: number;
-  valutType: number;
+  valutType: number[];
   pair: string;
   subText: string;
   payment: number;
