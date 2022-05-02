@@ -8,7 +8,7 @@ export interface IValutsCard {
   protocol: number;
   valutType: number[];
   pair: string;
-  subText: string;
+  lp: string;
   payment: number;
   farmLink: string;
 }
@@ -19,7 +19,7 @@ const ValutsCard: FC<IValutsCard> = (props) => {
     protocol,
     valutType,
     pair,
-    subText,
+    lp,
     payment,
     farmLink
   } = props;
@@ -30,7 +30,7 @@ const ValutsCard: FC<IValutsCard> = (props) => {
         <img src={protocols[protocol].img} alt="" className=" w-40 mx-6"/>
         <div className="flex flex-row">
           <div> {protocols[protocol].protocol+' '+pair} </div>
-          <div>{subText}</div>
+          <div>Auto-Compounding {lp}</div>
           <div>
             <Link to={farmLink} className=" text-sm cursor-pointer text-blue-500 underline">
               Farm Page

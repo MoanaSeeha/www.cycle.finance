@@ -12,7 +12,7 @@ import ListItemText from '@mui/material/ListItemText';
 import { CustomPage } from '../../components/Page'
 import PageHeader from '../../components/Page/Header';
 import { Board } from '../../components/Board';
-import ValutCard from './ValutsCard';
+import ValutCard, {IValutsCard} from './ValutsCard';
 
 interface State {
   search: string;
@@ -43,12 +43,31 @@ export const valutTypes = [
   'CYCLE Valuts',
 ]
 
-interface IValutCard {
-  
-}
-
-const ValutCards = [
-
+const ValutCards:IValutsCard[] = [
+  {
+    protocol: 3,
+    valutType: [3],
+    pair: 'AVAX/WETH.e',
+    lp: 'JLP',
+    payment: 0,
+    farmLink: 'https://analytics.traderjoexyz.com/pairs/0xfe15c2695f1f920da45c30aae47d11de51007af9',
+  },
+  {
+    protocol: 2,
+    valutType: [3],
+    pair: 'AVAX/AVE',
+    lp: 'PGL',
+    payment: 0,
+    farmLink: 'https://info.pangolin.exchange/#/pair/0x62a2f206cc78babac9db4dbc0c9923d4fddef047',
+  },
+  {
+    protocol: 5,
+    valutType: [3],
+    pair: 'AVAX/AVE',
+    lp: 'PGL',
+    payment: 0,
+    farmLink: 'https://info.pangolin.exchange/#/pair/0x62a2f206cc78babac9db4dbc0c9923d4fddef047',
+  },
 ]
 
 const LpHunt = () => {
@@ -151,6 +170,18 @@ const LpHunt = () => {
           </Board>
         </div>
         
+      </div>
+      <div className='flex flex-col flex-wrap justify-center w-full '>
+        {
+          ValutCards.map((v,i) => {
+            if(
+              (values.protocols.includes(v.protocol.toString()) || values.protocols.length === 0) &&
+              (v.valutType.includes(Number(values.valutType)) || values.valutType === '0')
+            )
+              <ValutCard {...v} key={i} />
+            }
+          )
+        }
       </div>
     </CustomPage>
   )
