@@ -137,7 +137,7 @@ const LpHunt = () => {
                 />
               </div>
             </div>
-            <div>
+            <div className='flex flex-wrap lg:space-y-0 space-y-3'>
               <FormControl>
                 <InputLabel id="demo-simple-select-label" className='text-white'>Valut Type</InputLabel>
                 <Select
@@ -190,22 +190,26 @@ const LpHunt = () => {
         </div>
         
       </div>
-      <div className='flex flex-col flex-wrap justify-center w-full '>
+      <div className='flex flex-row flex-wrap justify-center w-full '>
+       
         {
           ValutCards.map((v,i) => {
-            let f = false;
+            let pf = false, vf = false;
             values.protocols.map(p => {
-              if(p.toString() === v.protocol.toString()) f=true;
+              if(p.toString() === v.protocol.toString()) pf=true;
             })
+            if(values.protocols.length === 0) pf = true;
             v.valutType.map(v => {
-              if(v === parseInt(values.valutType) && f) f=true;
+              if(v === parseInt(values.valutType)) vf = true;
             })
-            console.log(f);
-            if((values.protocols.length === 0 && values.valutType === '0') || f)
-              return <ValutCard {...v} key={i} />
+            if(values.valutType == '0') vf = true;
+            if(vf && pf)
+              return <div className=' md:w-[600px] w-9/12'><ValutCard {...v} key={i} /> </div>
             }
           )
         }
+       
+        
       </div>
     </CustomPage>
   )

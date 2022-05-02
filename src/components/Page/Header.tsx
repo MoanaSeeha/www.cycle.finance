@@ -18,7 +18,7 @@ type Props = {
 
 const PageHeader:FunctionComponent<Props> = (props: Props) => (
   <div className="flex flex-col items-center justify-center w-full space-y-5">
-    <h1 className=' w-[500px] text-center text-gray-300 text-4xl'>{props.title}</h1>
+    <h1 className=' md:w-[500px] w-64 text-center text-gray-300 text-4xl'>{props.title}</h1>
     <HeaderBorder/>
   </div>
 )
