@@ -13,7 +13,7 @@ import { secondsInYear } from '../../../constants/apy';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import { useFindBlock } from '../../../constants/hooks';
 
-import xCycleABI from '../../../abis/xCycle.json';
+import xCycleABI from '../../../abis/xCycle.sol/xCycle.json';
 
 const xCYCLELink = "https://guide.cycle.finance/token/xcycle";
 

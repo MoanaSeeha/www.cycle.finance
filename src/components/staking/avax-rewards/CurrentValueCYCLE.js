@@ -5,7 +5,7 @@ import colors from '../../../constants/colors';
 import Skeleton from '@material-ui/lab/Skeleton';
 import Web3 from 'web3';
 import addresses from '../../../constants/addresses';
-import CYCLEtoAvaxABI from '../../../abis/CYCLEtoAVAX.json';
+import CYCLEtoAvaxABI from '../../../abis/Cycle.sol/Cycle.json';
 import { useWeb3React } from '@web3-react/core';
 
 const Container = styled.div`

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import colors from '../../../constants/colors';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import Cycle from '../../../abis/Cycle.json';
+import Cycle from '../../../abis/Cycle.sol/Cycle.json';
 import Web3 from 'web3';
 import addresses from '../../../constants/addresses';
 import Skeleton from '@material-ui/lab/Skeleton';

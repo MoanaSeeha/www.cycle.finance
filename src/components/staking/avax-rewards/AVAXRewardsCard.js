@@ -11,8 +11,9 @@ import { CONNECTION_URL } from '../../../constants/connection';
 import { useWeb3React } from '@web3-react/core';
 import { secondsInYear } from '../../../constants/apy';
 import PriceHelperABI from '../../../abis/PriceHelper.sol/PriceHelper.json';
-import AVAXRewardsTVLABI from '../../../abis/AVAXRewardsTVL.json';
-import AVAXRewardsABI from '../../../abis/AVAXRewards.json';
+// import AVAXRewardsTVLABI from '../../../abis/AVAXRewardsTVL.json';
+import AVAXRewardsABI from '../../../abis/AVAXRewards.sol/ETHRewards.json'
+//AVAXRewards.json';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
 
@@ -94,10 +95,10 @@ const AVAXRewardsCard = ({ blockNumberForEvents }) => {
             web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
         }
         const _PriceHelperContract = new web3.eth.Contract(PriceHelperABI, addresses.priceHelper);
-        const _AVAXRewardsTVLcontract = new web3.eth.Contract(AVAXRewardsTVLABI, addresses.avaxRewardsTVL);
+        // const _AVAXRewardsTVLcontract = new web3.eth.Contract(AVAXRewardsTVLABI, addresses.avaxRewardsTVL);
         const _AVAXRewardsContract = new web3.eth.Contract(AVAXRewardsABI, addresses.avaxRewards);
         setPriceHelperContract(_PriceHelperContract);
-        setAVAXRewardsTVLcontract(_AVAXRewardsTVLcontract);
+        // setAVAXRewardsTVLcontract(_AVAXRewardsTVLcontract);
         setAVAXRewardsContract(_AVAXRewardsContract);
     }, [active]);
 

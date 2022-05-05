@@ -6,7 +6,7 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import { calculateAPY } from '../../constants/apy';
 import OpenInNewIcon from '@material-ui/icons/OpenInNew';
 import Web3 from 'web3';
-import VaultRewards from '../../abis/VaultRewards.json';
+import VaultRewards from '../../abis/vaults/VaultRewards.sol/VaultRewards.json';
 import { CONNECTION_URL } from '../../constants/connection';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));

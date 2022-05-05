@@ -4,7 +4,7 @@ import SlideToggle from '../../common/SlideToggle';
 import CycleButton from '../../common/CycleButton';
 import colors from '../../../constants/colors';
 import { formatTokenAmount } from '../../../constants/format';
-import CycleABI from '../../../abis/Cycle.json';
+import CycleABI from '../../../abis/Cycle.sol/Cycle.json';
 import Web3 from 'web3';
 import addresses from '../../../constants/addresses';
 import { useWeb3React } from '@web3-react/core';

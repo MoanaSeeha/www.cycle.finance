@@ -5,7 +5,7 @@ import colors from '../../../constants/colors';
 import Skeleton from '@material-ui/lab/Skeleton';
 import Web3 from 'web3';
 import addresses from '../../../constants/addresses';
-import CoreRewardsLPtoAvaxABI from '../../../abis/CoreRewardsLPtoAVAX.json';
+import CoreRewardsLPtoAvaxABI from '../../../abis/CoreRewards.sol/CoreRewards.json';
 import { useWeb3React } from '@web3-react/core';
 
 const Container = styled.div`

@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import Web3 from 'web3';
-import CycleVaultV3ABI from '../../../abis/CycleVaultV3.json';
+import CycleVaultV3ABI from '../../../abis/vaults/CycleVaultV3.sol/CycleVaultV3.json';
 import vaults from '../../../constants/vaults';
 import Skeleton from '@material-ui/lab/Skeleton';
 import BN from 'bn.js';
 import addresses from '../../../constants/addresses';
-import DistributorABI from '../../../abis/DistributorV5.json';
-import CYCLEtoAVAXABI from '../../../abis/CYCLEtoAVAX.json';
+import DistributorABI from '../../../abis/DistributorV5.sol/DistributorV5.json';
+import CYCLEtoAVAXABI from '../../../abis/Cycle.sol/Cycle.json';
+// /CYCLEtoAVAX.json';
 import colors from '../../../constants/colors';
 import { CONNECTION_URL } from '../../../constants/connection';
 import { useFindBlock } from '../../../constants/hooks';

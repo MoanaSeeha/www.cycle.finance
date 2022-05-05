@@ -11,10 +11,10 @@ import { CONNECTION_URL } from '../../../constants/connection';
 import { useWeb3React } from '@web3-react/core';
 import { secondsInYear } from '../../../constants/apy';
 
-import DistributorABI from '../../../abis/DistributorV5.json';
-import PriceHelperABI from '../../../abis/PriceHelper.json';
-import CoreRewardsTVLABI from '../../../abis/CoreRewardsTVL.json';
-import CoreRewardsABI from '../../../abis/CoreRewards.json';
+import DistributorABI from '../../../abis/DistributorV5.sol/DistributorV5.json';
+import PriceHelperABI from '../../../abis/PriceHelper.sol/PriceHelper.json';
+import CoreRewardsTVLABI from '../../../abis/CoreRewards.sol/CoreRewards.json';
+import CoreRewardsABI from '../../../abis/CoreRewards.sol/CoreRewards.json';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
 
