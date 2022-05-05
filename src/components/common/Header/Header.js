@@ -9,8 +9,8 @@ import DiscordIcon from 'mdi-material-ui/Discord';
 import GithubIcon from 'mdi-material-ui/Github';
 import TwitterIcon from 'mdi-material-ui/Twitter';
 import BookOpenPageVariantIcon from 'mdi-material-ui/BookOpenPageVariant';
-import TelegramIcon from 'mdi-material-ui/Telegram';
-import { ReactComponent as MediumIcon } from './medium.svg';
+// import TelegramIcon from 'mdi-material-ui/Telegram';
+// import { ReactComponent as MediumIcon } from './medium.svg';
 import Wallet from './Wallet';
 import colors from '../../../constants/colors';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -355,13 +355,13 @@ const Header = ({ page, setPage, provider }) => {
                                             </div>
                                             <div className="lower-links">
                                                 <IconButton onClick={() => openLink(TelegramLink)}>
-                                                    <TelegramIcon />
+                                                    {/* <TelegramIcon /> */}
                                                 </IconButton>
                                                 <IconButton onClick={() => openLink(MediumLink)}>
-                                                    <SvgIcon
+                                                    {/* <SvgIcon
                                                         className="medium-svg"
                                                         component={MediumIcon}
-                                                    />
+                                                    /> */}
                                                 </IconButton>
                                                 <IconButton onClick={() => openLink(GitBookLink)}>
                                                     <BookOpenPageVariantIcon />
@@ -415,13 +415,13 @@ const Header = ({ page, setPage, provider }) => {
                                         <TwitterIcon />
                                     </IconButton>
                                     <IconButton onClick={() => openLink(TelegramLink)} className="zoom">
-                                        <TelegramIcon />
+                                        {/* <TelegramIcon /> */}
                                     </IconButton>
                                     <IconButton onClick={() => openLink(MediumLink)} className="zoom">
-                                        <SvgIcon
+                                        {/* <SvgIcon
                                             className="medium-svg"
                                             component={MediumIcon}
-                                        />
+                                        /> */}
                                     </IconButton>
                                     <IconButton onClick={() => openLink(GitBookLink)} className="zoom">
                                         <BookOpenPageVariantIcon />

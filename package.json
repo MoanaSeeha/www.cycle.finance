@@ -5,6 +5,7 @@
   "dependencies": {
     "@emotion/react": "^11.9.0",
     "@emotion/styled": "^11.8.1",
+    "@ethersproject/abi": "^5.6.1",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
     "@material-ui/lab": "^4.0.0-alpha.61",
@@ -19,10 +20,13 @@
     "@web3-react/core": "^6.1.9",
     "@web3-react/injected-connector": "^6.0.7",
     "aos": "^2.3.4",
+    "assert": "^2.0.0",
+    "aws-amplify": "^4.3.21",
     "crypto": "^1.0.1",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
     "mdi-material-ui": "^7.2.0",
+    "os": "^0.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-icons": "^4.3.1",
@@ -37,6 +41,7 @@
     "url": "^0.11.0",
     "web-vitals": "^2.1.4",
     "web3": "^1.7.3",
+    "web3-providers-http": "^1.7.3",
     "webfontloader": "^1.6.28"
   },
   "scripts": {
@@ -65,5 +70,8 @@
   },
   "devDependencies": {
     "styled-components": "^5.3.3"
+  },
+  "browser": {
+    "crypto": false
   }
 }

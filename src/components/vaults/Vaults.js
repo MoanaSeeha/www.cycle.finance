@@ -20,7 +20,7 @@ import { CONNECTION_URL } from '../../constants/connection';
 import PriceHelperABI from '../../abis/PriceHelper.sol/PriceHelper.json';
 import DistributorABI from '../../abis/DistributorV5.sol/DistributorV5.json';
 import AVAXRewardsTVLABI from '../../abis/AVAXRewards.sol/ETHRewards.json';
-import CYCLEtoAvaxABI from '../../../abis/Cycle.sol/Cycle.json';
+// import CYCLEtoAvaxABI from '../../../abis/Cycle.sol/Cycle.json';
 // import LPBreakdownABI from '../../abis//LPBreakdown.json';
 import { useFindBlock } from '../../constants/hooks';
 

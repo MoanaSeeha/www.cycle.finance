@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import colors from '../../../constants/colors';
 import CycleButton from '../../common/CycleButton';
 import { formatTokenAmount } from '../../../constants/format';
-import CallFeeAmount from '../../../abis/CallFeeAmount.json';
+import CallFeeAmount from '../../../abis/CallFeeAmount.sol/CallFeeAmount.json';
 import addresses from '../../../constants/addresses';
 import IconButton from '@material-ui/core/IconButton';
 import HelpCircleIcon from 'mdi-material-ui/HelpCircle';

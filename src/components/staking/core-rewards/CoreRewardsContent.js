@@ -4,7 +4,8 @@ import SlideToggle from '../../common/SlideToggle';
 import CycleButton from '../../common/CycleButton';
 import colors from '../../../constants/colors';
 import { formatTokenAmount } from '../../../constants/format';
-import PangolinPair from '../../abis/DistributorV5.sol/PangolinLibrary.json';
+import PangolinPair from '../../../abis/DistributorV5.sol/PangolinLibrary.json';
+
 import Web3 from 'web3';
 import addresses from '../../../constants/addresses';
 import { useWeb3React } from '@web3-react/core';
