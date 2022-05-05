@@ -4,7 +4,7 @@ import colors from '../../../constants/colors';
 import Web3 from 'web3';
 import addresses from '../../../constants/addresses';
 import Skeleton from '@material-ui/lab/Skeleton';
-import StrategyVariablesABI from '../../../abis/StrategyVariables.json';
+import StrategyVariablesABI from '../../../abis/vaults/StrategyVariables.sol/StrategyVariables.json';
 import { CONNECTION_URL } from '../../../constants/connection';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));

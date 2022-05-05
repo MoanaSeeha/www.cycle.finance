@@ -10,7 +10,7 @@ import Skeleton from '@material-ui/lab/Skeleton';
 import { CONNECTION_URL } from '../../../constants/connection';
 import { useWeb3React } from '@web3-react/core';
 import { secondsInYear } from '../../../constants/apy';
-import PriceHelperABI from '../../../abis/PriceHelper.json';
+import PriceHelperABI from '../../../abis/PriceHelper.sol/PriceHelper.json';
 import AVAXRewardsTVLABI from '../../../abis/AVAXRewardsTVL.json';
 import AVAXRewardsABI from '../../../abis/AVAXRewards.json';
 
