@@ -2,7 +2,7 @@ import React, { useState, createContext } from 'react';
 import ConnectedMain from './components/ConnectedMain';
 import { useEagerConnect } from './constants/hooks';
 // import Amplify from 'aws-amplify';
-import awsconfig from './aws-exports';
+// import awsconfig from './aws-exports';
 import ConnectionDialog from './components/common/ConnectionDialog';
 
 // Amplify.configure(awsconfig);

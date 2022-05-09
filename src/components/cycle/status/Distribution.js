@@ -11,7 +11,7 @@ import { CONNECTION_URL } from '../../../constants/connection';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
 
-const CycleContract = new web3.eth.Contract(Cycle, addresses.cycle);
+const CycleContract = new web3.eth.Contract(Cycle.abi, addresses.cycle);
 
 const Container = styled.div`
     border-bottom: 1px solid ${colors.borderLight};
