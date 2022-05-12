@@ -144,7 +144,7 @@ const AutoLPCardHeader = ({
     useEffect(() => {
         if (vault.avaxTVL && CycleToAvaxContract && blockNumberForRewardEvent && !vault.decomm) {
             const getCycleAPR = async () => {
-                const rewardContract = new web3.eth.Contract(VaultRewards, vault.addresses.rewards);
+                const rewardContract = new web3.eth.Contract(VaultRewards.abi, vault.addresses.rewards);
                 const events = await rewardContract.getPastEvents("RewardAdded", { fromBlock: blockNumberForRewardEvent, toBlock: 'latest' });
                 // if events empty, it's new vault w no distribution so return N/A or show nothing
                 if (events.length === 0) {

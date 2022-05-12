@@ -9,7 +9,7 @@ import { CONNECTION_URL } from '../../../constants/connection';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
 
-const StrategyVariablesContract = new web3.eth.Contract(StrategyVariablesABI, addresses.strategyVariables);
+const StrategyVariablesContract = new web3.eth.Contract(StrategyVariablesABI.abi, addresses.strategyVariables);
 
 const Container = styled.div`
     // border-bottom: 1px solid ${colors.borderLight};

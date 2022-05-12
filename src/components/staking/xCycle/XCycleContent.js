@@ -171,7 +171,7 @@ const XCycleRewardsContent = ({ xCYCLEbalance, updatexCYCLEbalance, panelOpen, g
     useEffect(() => {
         if (active && library) {
             const web3 = new Web3(library.givenProvider);
-            const _CycleContract = new web3.eth.Contract(CycleABI, addresses.cycle);
+            const _CycleContract = new web3.eth.Contract(CycleABI.abi, addresses.cycle);
             setCycleContract(_CycleContract);
         }
     }, [active]);

@@ -50,7 +50,7 @@ const CurrentValueCYCLE = ({ cycleStaked, panelOpen, PriceHelperContract }) => {
     useEffect(() => {
         if (active && library) {
             const web3 = new Web3(library.givenProvider);
-            const _CYCLEtoAvaxContract = new web3.eth.Contract(CYCLEtoAvaxABI, addresses.cycleToAvax);
+            const _CYCLEtoAvaxContract = new web3.eth.Contract(CYCLEtoAvaxABI.abi, addresses.cycleToAvax);
             setCYCLEtoAvaxContract(_CYCLEtoAvaxContract);
         }
     }, [active]);

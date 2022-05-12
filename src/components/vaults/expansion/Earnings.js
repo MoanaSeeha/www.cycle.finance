@@ -172,7 +172,7 @@ const Earnings = ({
     DistributorContract
 }) => {
 
-    const CallFeeAmountContract = new web3.eth.Contract(CallFeeAmount, addresses.callFeeAmount[vault.rewardToken]);
+    const CallFeeAmountContract = new web3.eth.Contract(CallFeeAmount.abi, addresses.callFeeAmount[vault.rewardToken]);
 
     const [harvestButtonLoading, setHarvestButtonLoading] = useState(false);
     const [claimButtonLoading, setClaimButtonLoading] = useState(false);

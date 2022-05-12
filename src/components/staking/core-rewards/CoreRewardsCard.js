@@ -95,10 +95,10 @@ const CoreRewardsCard = ({ blockNumberForEvents }) => {
         } else {
             web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
         }
-        const _DistributorContract = new web3.eth.Contract(DistributorABI, addresses.distributor);
-        const _PriceHelperContract = new web3.eth.Contract(PriceHelperABI, addresses.priceHelper);
-        const _CoreRewardsTVLcontract = new web3.eth.Contract(CoreRewardsTVLABI, addresses.coreRewardsTVL);
-        const _CoreRewardsContract = new web3.eth.Contract(CoreRewardsABI, addresses.coreRewards);
+        const _DistributorContract = new web3.eth.Contract(DistributorABI.abi, addresses.distributor);
+        const _PriceHelperContract = new web3.eth.Contract(PriceHelperABI.abi, addresses.priceHelper);
+        const _CoreRewardsTVLcontract = new web3.eth.Contract(CoreRewardsTVLABI.abi, addresses.coreRewardsTVL);
+        const _CoreRewardsContract = new web3.eth.Contract(CoreRewardsABI.abi, addresses.coreRewards);
         setDistributorContract(_DistributorContract);
         setPriceHelperContract(_PriceHelperContract);
         setCoreRewardsTVLcontract(_CoreRewardsTVLcontract);

@@ -50,7 +50,7 @@ const CurrentValueLP = ({ lpStaked, panelOpen, PriceHelperContract }) => {
     useEffect(() => {
         if (active && library) {
             const web3 = new Web3(library.givenProvider);
-            const _CoreRewardsLPtoAvaxContract = new web3.eth.Contract(CoreRewardsLPtoAvaxABI, addresses.coreRewardsLPtoAVAX);
+            const _CoreRewardsLPtoAvaxContract = new web3.eth.Contract(CoreRewardsLPtoAvaxABI.abi, addresses.coreRewardsLPtoAVAX);
             setCoreRewardsLPtoAvaxContract(_CoreRewardsLPtoAvaxContract);
         }
     }, [active]);

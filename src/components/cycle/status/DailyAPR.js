@@ -15,12 +15,12 @@ import { useFindBlock } from '../../../constants/hooks';
 
 const web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
 
-const DistributorContract = new web3.eth.Contract(DistributorABI, addresses.distributor);
-const CYCLEtoAVAXcontract = new web3.eth.Contract(CYCLEtoAVAXABI, addresses.cycleToAvax);
+const DistributorContract = new web3.eth.Contract(DistributorABI.abi, addresses.distributor);
+const CYCLEtoAVAXcontract = new web3.eth.Contract(CYCLEtoAVAXABI.abi, addresses.cycleToAvax);
 
 const vaultContracts = vaults.map(v => ({
     contracts: {
-        vault: new web3.eth.Contract(CycleVaultV3ABI, v.addresses.vault)
+        vault: new web3.eth.Contract(CycleVaultV3ABI.abi, v.addresses.vault)
     }
 }));
 

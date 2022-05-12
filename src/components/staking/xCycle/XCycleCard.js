@@ -113,7 +113,7 @@ const XCycleCard = () => {
         } else {
             web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
         }
-        const _xCycleContract = new web3.eth.Contract(xCycleABI, addresses.xCycle);
+        const _xCycleContract = new web3.eth.Contract(xCycleABI.abi, addresses.xCycle);
         setxCycleContract(_xCycleContract);
     }, [active]);
 

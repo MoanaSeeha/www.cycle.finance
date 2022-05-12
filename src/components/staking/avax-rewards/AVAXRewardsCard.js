@@ -94,9 +94,9 @@ const AVAXRewardsCard = ({ blockNumberForEvents }) => {
         } else {
             web3 = new Web3(new Web3.providers.HttpProvider(CONNECTION_URL));
         }
-        const _PriceHelperContract = new web3.eth.Contract(PriceHelperABI, addresses.priceHelper);
-        // const _AVAXRewardsTVLcontract = new web3.eth.Contract(AVAXRewardsTVLABI, addresses.avaxRewardsTVL);
-        const _AVAXRewardsContract = new web3.eth.Contract(AVAXRewardsABI, addresses.avaxRewards);
+        const _PriceHelperContract = new web3.eth.Contract(PriceHelperABI.abi, addresses.priceHelper);
+        // const _AVAXRewardsTVLcontract = new web3.eth.Contract(AVAXRewardsTVLABI., addresses.avaxRewardsTVL);
+        const _AVAXRewardsContract = new web3.eth.Contract(AVAXRewardsABI.abi, addresses.avaxRewards);
         setPriceHelperContract(_PriceHelperContract);
         // setAVAXRewardsTVLcontract(_AVAXRewardsTVLcontract);
         setAVAXRewardsContract(_AVAXRewardsContract);

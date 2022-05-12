@@ -235,16 +235,16 @@ const Vaults = () => {
         }
         const _vaultsWithContracts = vaults.map(v => ({
             contracts: {
-                vault: new web3.eth.Contract(CycleVaultV3, v.addresses.vault),
-                strategy: new web3.eth.Contract(StakingRewardsStrategyV2, v.addresses.strategy),
-                pair: new web3.eth.Contract(PangolinPair, v.addresses.pair),
-                rewards: new web3.eth.Contract(VaultRewards, v.addresses.rewards)
+                vault: new web3.eth.Contract(CycleVaultV3.abi, v.addresses.vault),
+                strategy: new web3.eth.Contract(StakingRewardsStrategyV2.abi, v.addresses.strategy),
+                pair: new web3.eth.Contract(PangolinPair.abi, v.addresses.pair),
+                rewards: new web3.eth.Contract(VaultRewards.abi, v.addresses.rewards)
             },
             ...v
         }));
-        const _PriceHelperContract = new web3.eth.Contract(PriceHelperABI, addresses.priceHelper);
-        const _DistributorContract = new web3.eth.Contract(DistributorABI, addresses.distributor);
-        const _AVAXRewardsTVLcontract = new web3.eth.Contract(AVAXRewardsTVLABI, addresses.avaxRewardsTVL);
+        const _PriceHelperContract = new web3.eth.Contract(PriceHelperABI.abi, addresses.priceHelper);
+        const _DistributorContract = new web3.eth.Contract(DistributorABI.abi, addresses.distributor);
+        const _AVAXRewardsTVLcontract = new web3.eth.Contract(AVAXRewardsTVLABI.abi, addresses.avaxRewardsTVL);
         // const _CycleToAvaxContract = new web3.eth.Contract(CycleToAvaxABI, addresses.cycleToAvax);
         // const _LPBreakdownContract = new web3.eth.Contract(LPBreakdownABI, addresses.lpBreakdown);
         setVaultsWithContracts(_vaultsWithContracts);

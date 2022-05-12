@@ -170,7 +170,7 @@ const CoreRewardsContent = ({ lpStaked, updateLpStaked, panelOpen, CoreRewardsCo
     useEffect(() => {
         if (active && library) {
             const web3 = new Web3(library.givenProvider);
-            const _CycleLPcontract = new web3.eth.Contract(PangolinPair, addresses.cycleLP);
+            const _CycleLPcontract = new web3.eth.Contract(PangolinPair.abi, addresses.cycleLP);
             setCycleLPcontract(_CycleLPcontract);
         }
     }, [active]);
