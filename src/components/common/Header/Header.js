@@ -329,8 +329,9 @@ const Header = ({ page, setPage, provider }) => {
                                     className="drawer"
                                 >
                                     <MenuList>
-                                        {provider && ['vaults', 'stake', 'cycle'].map(p => (
+                                        {provider && ['vaults', 'stake', 'cycle'].map((p,i) => (
                                             <div
+                                                key={i}
                                                 className={`drawer-link ${page === p && "selected"}`}
                                                 onClick={() => {
                                                     setPage(p);
@@ -391,8 +392,9 @@ const Header = ({ page, setPage, provider }) => {
                                 />
                             </div>
                             <div className="header-center">
-                                {provider && ['vaults', 'stake', 'cycle'].map(p => (
+                                {provider && ['vaults', 'stake', 'cycle'].map((p,i) => (
                                     <div
+                                        key={i}
                                         className={`header-link ${page === p && "selected"}`}
                                         onClick={() => setPage(p)}
                                     >
@@ -426,12 +428,12 @@ const Header = ({ page, setPage, provider }) => {
                                     <IconButton onClick={() => openLink(GitBookLink)} className="zoom">
                                         <BookOpenPageVariantIcon />
                                     </IconButton>
-                                    <div class="dropdown">
+                                    <div className="dropdown">
                                         <Button className="more-button">
                                             ...
                                             <ArrowDropDownIcon fontSize="small"/>
                                         </Button>
-                                        <div class="dropdown-content">
+                                        <div className="dropdown-content">
                                             <a onClick={() => openLink(tradeLink)}>Get $CYCLE</a>
                                             <a onClick={() => openLink(analyticsLink)}>Analytics page</a>
                                             <a onClick={() => openLink(CMCLink)}>CoinMarketCap</a>

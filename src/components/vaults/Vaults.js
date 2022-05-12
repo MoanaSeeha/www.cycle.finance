@@ -475,9 +475,10 @@ const Vaults = () => {
                     }
                 }
             })}  
-            {!vaultData && vaults.map(v => {
+            {!vaultData && vaults.map((v, i) => {
                 return (
                     <Skeleton
+                        key={i}
                         className="skeleton"
                         variant="rect"
                         width={600}
